@@ -1,0 +1,26 @@
+
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+<div id="app">
+
+</div>
+  <button onclick='myFunction()'>Click</button> 
+
+<script>
+function myFunction()
+{
+   var url = 'www.newsapi.org/v2/everything?' +
+          'q=Apple&' +
+          'from=2020-08-19&' +
+          'sortBy=popularity&' +
+          'apiKey=92ec2c2bb03845289831a1077615c6ff';
+
+  var req = new Request(url);
+
+  fetch(req)
+      .then(function(response) {
+          console.log(response.json());
+      })
+
+}
+
+</script>
